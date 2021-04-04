@@ -1353,3 +1353,17 @@ def re_error(data):
                 data = '<h2>' + load_lang('error') + '</h2><ul class="inside_ul"><li>' + data + '</li></ul>',
                 menu = 0
             )), 400
+
+def load_oauth(provider):
+    oauth_native = open('oauthsettings.json', encoding='utf-8').read()
+    oauth = json.loads(oauth_native)
+    return oauth[provider]
+
+    
+def update_oauth(provider, target, content):
+    oauth_native = open('oauthsettings.json', encoding='utf-8').read()
+    oauth = json.loads(oauth_native)
+    oauth[provider][target] = content
+    with open('oauthsettings.json', 'w', encoding='utf-8') as f:
+        json.dump(oauth, f)
+    return 'Done'

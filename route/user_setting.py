@@ -49,7 +49,7 @@ def user_setting_2(conn, server_init):
             div2 = load_skin('', 0, 1)
             div3 = ''
 
-            curs.execute(db_change('select data from user_set where name = "lang" and id = ?'), [ip_check()])
+            curs.execute(db_change('select data from user_set where name = "lang" and id = ?'), [flask.session['id']])
             data = curs.fetchall()
             data = [['default']] if not data else data
 

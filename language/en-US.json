@@ -147,6 +147,7 @@
         "oauth_signin_naver" : "Sign-in with NAVER",
         "oauth_signin_discord" : "Sign-in with Discord",
         "oauth_signin_kakao" : "Sign-in with Kakao",
+        "oauth_signin_google" : "Sign-in with Google",
         "connection" : "Connection",
         "new_connection" : "Connect...",
         "user_setting" : "User settings",

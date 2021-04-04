@@ -151,6 +151,8 @@ create_data['scan'] = ['user', 'title', 'type']
 create_data['acl'] = ['title', 'data', 'type']
 create_data['html_filter'] = ['html', 'kind', 'plus', 'plus_t']
 create_data['vote'] = ['name', 'id', 'subject', 'data', 'user', 'type', 'acl']
+create_data['oauth_conn'] = ['provider', 'wiki_id', 'sns_id', 'name', 'picture']
+
 for i in create_data:
     try:
         curs.execute(db_change('select test from ' + i + ' limit 1'))
@@ -523,6 +525,11 @@ def user_tool(name = None):
 @app.route('/2fa_login', methods=['POST', 'GET'])
 def login_2fa():
     return login_2fa_2(conn)
+
+# OAuth
+@app.route('/oauth/<regex("naver|facebook"):platform>/<regex("init|callback"):func>', methods=['GET', 'POST'])
+def login_oauth(platform = None, func = None):
+    return login_oauth_2(platform, func)
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
