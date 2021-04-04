@@ -47,6 +47,9 @@ def login_2(conn):
 
             return redirect('/user')
     else:
+        oauth_content = '<div class="oauth-wrapper"><ul class="oauth-list">'
+        oauth_content += '<link rel="stylesheet" href="/views/main_css/css/oauth.css"><li><a href="/oauth/google/init"><div class="oauth-btn oauth-btn-google"><div class="oauth-btn-logo oauth-btn-google"></div>Google</div></a></li>'
+        oauth_content += '</ul></div>'
         return easy_minify(flask.render_template(skin_check(),
             imp = [load_lang('login'), wiki_set(), custom(), other2([0, 0])],
             data =  '''
@@ -57,6 +60,9 @@ def login_2(conn):
                         <hr class=\"main_hr\">
                         ''' + captcha_get() + '''
                         <button type="submit">''' + load_lang('login') + '''</button>
+                        <hr class=\"main_hr\">
+                        ''' + oauth_content + '''
+                        <hr class=\"main_hr\">
                         ''' + http_warring() + '''
                     </form>
                     ''',
