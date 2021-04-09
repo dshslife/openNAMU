@@ -37,12 +37,12 @@ li {
 }
 
 #background {
-    background: gainsboro;
+    background: #2BAE66;
 }
 
 #top {
     width: 100%;
-    background: #4a4a4a;
+    background: #2BAE66;
     padding: 15px;
     padding-right: 0;
     padding-left: 0;
@@ -57,13 +57,13 @@ li {
     margin-top: -20px;
     padding: 20px;
     padding-bottom: 20px;
-    background: white;
+    background: #2BAE66;
     min-height: 350px;
 }
 
 #bottom {
     width: 100%;
-    background: white;
+    background: #2BAE66;
     padding-bottom: 20px;
 }
 
@@ -191,7 +191,7 @@ h6 {
     border: 1px solid #aaa;
     padding: 10px;
     position: absolute;
-    background: white;
+    background: #2BAE66;
     margin-top: 10px;
 }
 
@@ -237,7 +237,7 @@ div#pre_search {
     width: 200px;
     color: black;
     margin-top: 5px;
-    background: white;
+    background: #2BAE66;
     position: absolute;
 }
 
@@ -285,6 +285,7 @@ a {
 
 pre, #toc, #cate, #redirect {
     border: 1px solid #aaa;
+    background: #2BAE66;
 }
 
 textarea, input {
