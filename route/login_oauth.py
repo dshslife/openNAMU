@@ -15,7 +15,7 @@ def oauth_login_2(conn):
 
     if flask.request.method == 'GET':
         flow = InstalledAppFlow.from_client_secrets_file(
-            '/app/config/client_secrets.json',
+            '/app/client_secrets.json',
             scopes=['openid', 'https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile'])
 
         flow.run_local_server()
