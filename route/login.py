@@ -50,16 +50,7 @@ def login_2(conn):
         return easy_minify(flask.render_template(skin_check(),
             imp = [load_lang('login'), wiki_set(), custom(), other2([0, 0])],
             data =  '''
-                    <form method="post">
-                        <input placeholder="''' + load_lang('id') + '''" name="id" type="text">
-                        <hr class=\"main_hr\">
-                        <input placeholder="''' + load_lang('password') + '''" name="pw" type="password">
-                        <hr class=\"main_hr\">
-                        ''' + captcha_get() + '''
-                        <button type="submit">''' + load_lang('login') + '''</button>
-                        <hr class=\"main_hr\">
-                        ''' + http_warring() + '''
-                    </form>
+                    <a href="https://accounts.google.com/o/oauth2/auth?client_id=asdfasdfasdfasdfasdf&redirect_uri=https://dshs.wiki/oauth_login&scope=https://www.googleapis.com/auth/plus.login&response_type=code"><img src="static/login.png" alt="login_picture" ></a>
                     ''',
             menu = [['user', load_lang('return')]]
         ))
