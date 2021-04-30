@@ -4,7 +4,7 @@ body {
     word-wrap: break-word;
     margin: 0;
     font-family: 'Apple SD Gothic', '맑은고딕', 'Nanum Gothic', 'Noto Sans KR', sans-serif;
-    font-size: 0.85rem;
+    font-size: 14px;
 }
 
 ul {
@@ -42,7 +42,7 @@ li {
 
 #top {
     width: 100%;
-    background: #4a4a4a;
+    background: #2BAE66;
     padding: 15px;
     padding-right: 0;
     padding-left: 0;
@@ -63,7 +63,7 @@ li {
 
 #bottom {
     width: 100%;
-    background: white;
+    background: gainsboro;
     padding-bottom: 20px;
 }
 
@@ -191,7 +191,7 @@ h6 {
     border: 1px solid #aaa;
     padding: 10px;
     position: absolute;
-    background: white;
+    background: #72f8af;
     margin-top: 10px;
 }
 
@@ -237,7 +237,7 @@ div#pre_search {
     width: 200px;
     color: black;
     margin-top: 5px;
-    background: white;
+    background: gainsboro;
     position: absolute;
 }
 
