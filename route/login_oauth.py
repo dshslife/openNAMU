@@ -3,7 +3,7 @@ from .tool.func import *
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
-def login_oauth_2(conn):
+def oauth_login_2(conn):
     curs = conn.cursor()
 
     ip = ip_check()
@@ -15,7 +15,7 @@ def login_oauth_2(conn):
 
     if flask.request.method == 'GET':
         flow = InstalledAppFlow.from_client_secrets_file(
-            '/config/client_secrets.json',
+            '/app/config/client_secrets.json',
             scopes=['openid', 'https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile'])
 
         flow.run_local_server()
