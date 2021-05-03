@@ -60,7 +60,7 @@ def login_2(conn):
                         <hr class=\"main_hr\">
                         ''' + http_warring() + '''
                     </form>
-                    <a href="https://accounts.google.com/o/oauth2/auth?client_id=asdfasdfasdfasdfasdf&redirect_uri=https://dshs.wiki/oauth_login&scope=https://www.googleapis.com/auth/plus.login&response_type=code"><img src="static/login.png" alt="login_picture" ></a>
+                    <a href="/login_oauth"><img src="static/login.png" alt="login_picture" ></a>
                     ''',
             menu = [['user', load_lang('return')]]
         ))
